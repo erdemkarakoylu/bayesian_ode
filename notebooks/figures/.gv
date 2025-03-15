@@ -1,0 +1,52 @@
+digraph {
+	m_Z [label="m_Z
+~
+LogNormal" shape=ellipse]
+	m_P [label="m_P
+~
+LogNormal" shape=ellipse]
+	r [label="r
+~
+LogNormal" shape=ellipse]
+	k_P [label="k_P
+~
+LogNormal" shape=ellipse]
+	N0 [label="N0
+~
+LogNormal" shape=ellipse]
+	"μ" [label="μ
+~
+LogNormal" shape=ellipse]
+	P0 [label="P0
+~
+LogNormal" shape=ellipse]
+	Z0 [label="Z0
+~
+LogNormal" shape=ellipse]
+	k_N [label="k_N
+~
+LogNormal" shape=ellipse]
+	g_max [label="g_max
+~
+LogNormal" shape=ellipse]
+	"σ" [label="σ
+~
+Exponential" shape=ellipse]
+	subgraph "cluster101 x 3" {
+		likelihood [label="likelihood
+~
+Normal" shape=ellipse]
+		label="101 x 3" labeljust=r labelloc=b style=rounded
+	}
+	m_Z -> likelihood
+	m_P -> likelihood
+	r -> likelihood
+	k_P -> likelihood
+	Z0 -> likelihood
+	"μ" -> likelihood
+	P0 -> likelihood
+	N0 -> likelihood
+	k_N -> likelihood
+	g_max -> likelihood
+	"σ" -> likelihood
+}
